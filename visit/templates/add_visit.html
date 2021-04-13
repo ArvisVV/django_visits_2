@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add visit</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        Name: <input type="text" name="name"> <br>
+        Date: <input type="text" name="date"> <br>
+        Reason: <input type="text" name="reason"> <br>
+        <input type="submit">
+    </form>
+</body>
+</html> 
