@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+
+class Visit(models.Model):
+
+    name = models.CharField(max_length=125)
+    date = models.CharField(max_length=10)
+    reason = models.CharField(max_length=125)

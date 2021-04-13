@@ -19,5 +19,12 @@ import visit.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', visit.views.index),
     path('add_visit', visit.views.add_visit),
 ]
+
+# jāizveido modelis Visit IR
+# jāizveido migrācijas IR
+# jāizveido admin lietotājs IR
+# jāpievieno jauns ieraksts DB, kad "Submit" IR
+# jāparāda visi ieraksti "/"
