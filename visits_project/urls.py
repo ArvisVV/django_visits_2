@@ -21,15 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', visit.views.index),
     path('add_visit', visit.views.add_visit),
+    path('filter_by_date', visit.views.filter_by_date),
 ]
 
-# izveidot Room modeli – id, description IR
-
-# jāizdara tā, lai veidojot Visit
-# ir jānorāda Room ID
-# '/add_vist'
-
-# parādīt Room ID sarakstā '/'
-
-
-# pašus Room veidojam admin
+# filter pēc date
+# filter pēc room id

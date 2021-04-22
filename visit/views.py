@@ -51,3 +51,24 @@ def add_visit(request):
     )
 
 
+def filter_by_date(request):
+
+    if request.method == 'POST':
+
+        date = request.POST['date']
+        visits = Visit.objects.filter(date=date)
+
+        context = {
+            'visits': visits
+        }
+
+        return render(
+            template_name='index.html',
+            request=request,
+            context=context,
+        )
+
+    return render(
+        template_name='filter_by_date.html',
+        request=request,
+    )
