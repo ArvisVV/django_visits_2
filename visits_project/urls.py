@@ -22,6 +22,7 @@ urlpatterns = [
     path('', visit.views.index),
     path('add_visit', visit.views.add_visit),
     path('filter_by_date', visit.views.filter_by_date),
+    path('filter_by_room', visit.views.filter_by_room),
 ]
 
 # filter pēc date
