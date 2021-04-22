@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from visit.models import Visit
+from django.shortcuts import render, HttpResponse
+from visit.models import Visit, Room
 
 
 def index(request):
@@ -21,10 +21,14 @@ def add_visit(request):
 
     if request.method == 'POST':
 
+        room_id = request.POST['room_id']
+        room = Room.objects.get(id=room_id)
+
         visit = Visit(
-            name=request.POST["name"],
-            date=request.POST["date"],
-            reason=request.POST["reason"],
+            name=request.POST['name'],
+            date=request.POST['date'],
+            reason=request.POST['reason'],
+            room=room,
         )
 
         visit.save()
@@ -44,6 +48,6 @@ def add_visit(request):
     return render(
         template_name='add_visit.html',
         request=request,
-        context={},
     )
+
 

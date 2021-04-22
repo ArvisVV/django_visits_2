@@ -10,7 +10,8 @@
         <li>
             Name: <strong>{{ visit.name }}</strong> <br>
             Date: {{ visit.date }} <br>
-            Reason: {{ visit.reason }}
+            Reason: {{ visit.reason }} <br>
+            Room ID: {{ visit.room.id }}
         </li>
         {% endfor %}
     </ul>

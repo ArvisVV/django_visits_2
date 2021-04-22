@@ -23,8 +23,13 @@ urlpatterns = [
     path('add_visit', visit.views.add_visit),
 ]
 
-# jāizveido modelis Visit IR
-# jāizveido migrācijas IR
-# jāizveido admin lietotājs IR
-# jāpievieno jauns ieraksts DB, kad "Submit" IR
-# jāparāda visi ieraksti "/"
+# izveidot Room modeli – id, description IR
+
+# jāizdara tā, lai veidojot Visit
+# ir jānorāda Room ID
+# '/add_vist'
+
+# parādīt Room ID sarakstā '/'
+
+
+# pašus Room veidojam admin
